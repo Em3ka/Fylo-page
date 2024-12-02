@@ -18,25 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
       errorMessage.style.opacity = 1;
     }
   });
-
-  const icons = document.querySelectorAll(".footer__social-icon");
-  icons.forEach((icon) => {
-    if (icon.classList.contains("fa-brands")) {
-      icon.classList.add("loaded");
-    } else {
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (
-            mutation.attributeName === "class" &&
-            icon.classList.contains("fa-brands")
-          ) {
-            icon.classList.add("loaded");
-            observer.disconnect();
-          }
-        });
-      });
-
-      observer.observe(icon, { attributes: true });
-    }
-  });
 });

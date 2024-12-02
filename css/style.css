@@ -396,16 +396,12 @@ main {
   gap: 1rem;
 }
 
-.footer__social-icon {
-  border: none;
+.footer__social-item i {
   padding: 0.5rem;
-  cursor: pointer;
-}
-
-.footer__social-icon.loaded {
   border: 1px solid var(--white);
   border-radius: 50%;
   transition: color 0.2s ease, border 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     color: var(--cyan);
